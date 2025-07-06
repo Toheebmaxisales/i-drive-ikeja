@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Award, Users, Car, MapPin } from 'lucide-react';
+import { Award, Users, Car, Clock } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Car, number: '500+', label: 'Premium Vehicles' },
-    { icon: Users, number: '10K+', label: 'Happy Customers' },
-    { icon: MapPin, number: '50+', label: 'Locations' },
-    { icon: Award, number: '15+', label: 'Years Experience' },
+    { icon: Car, number: '50+', label: 'Clean Vehicles' },
+    { icon: Users, number: '1000+', label: 'Happy Customers' },
+    { icon: Clock, number: '24/7', label: 'Always Available' },
+    { icon: Award, number: '5★', label: 'Top Rated Service' },
   ];
 
   return (
@@ -17,10 +17,10 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-4xl md:text-5xl text-deep-blue-black mb-4">
-              About <span className="text-soft-gold">LuxDrive</span>
+              About <span className="text-soft-gold">i-Drive</span>
             </h2>
             <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
-              Your premier destination for luxury car rentals, delivering excellence since 2008
+              Lagos' Trusted Car Rental Partner - Your Road, Your Rules
             </p>
           </div>
 
@@ -28,39 +28,40 @@ const About = () => {
             {/* Content */}
             <div className="animate-slide-in-left">
               <h3 className="font-poppins font-semibold text-2xl text-deep-blue-black mb-6">
-                Redefining Luxury Travel Experience
+                Welcome to i-Drive – Lagos' Trusted Car Rental Partner
               </h3>
               <div className="space-y-4 text-charcoal-gray">
                 <p>
-                  At LuxDrive, we believe that every journey should be extraordinary. With over 15 years of experience in the luxury automotive industry, we've built our reputation on providing unmatched service and the finest collection of premium vehicles.
+                  Whether you're visiting Lagos or need a ride for special occasions, i-Drive has got you covered. From luxury cars to Coaster buses, we offer both self-drive and chauffeur-driven rentals.
                 </p>
                 <p>
-                  Our meticulously maintained fleet features the latest models from world-renowned manufacturers, ensuring that every drive is a perfect blend of comfort, performance, and style.
+                  Operating 24/7, we pride ourselves on delivering comfort, affordability, and reliability. At i-Drive, we believe car rental should be simple, flexible, and always reliable.
                 </p>
                 <p>
-                  From business executives to special occasions, we cater to discerning clients who demand nothing but the best. Our commitment to excellence is reflected in every aspect of our service, from our pristine vehicles to our professional customer care.
+                  Based in Ikeja, Lagos, we've been serving individuals, families, and businesses with clean, affordable, and well-maintained vehicles for every need.
                 </p>
               </div>
               
-              {/* Why Choose Us */}
+              {/* Our Promise */}
               <div className="mt-8 space-y-4">
-                <h4 className="font-poppins font-semibold text-xl text-deep-blue-black">Why Choose LuxDrive?</h4>
+                <h4 className="font-poppins font-semibold text-xl text-deep-blue-black">Our Promise</h4>
+                <p className="text-charcoal-gray font-medium">We don't just rent cars. We deliver peace of mind.</p>
                 <ul className="space-y-2 text-charcoal-gray">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-soft-gold rounded-full mr-3"></div>
-                    Premium fleet with latest luxury models
+                    24/7 availability — even on holidays
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-soft-gold rounded-full mr-3"></div>
-                    24/7 customer support and roadside assistance
+                    Option for self-drive or professional drivers
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-soft-gold rounded-full mr-3"></div>
-                    Flexible rental options and competitive pricing
+                    Instant booking via WhatsApp
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-soft-gold rounded-full mr-3"></div>
-                    Professional chauffeur services available
+                    Fast delivery & pickup across Lagos
                   </li>
                 </ul>
               </div>
@@ -70,14 +71,14 @@ const About = () => {
             <div className="animate-slide-in-right">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury car interior"
+                  src="/lovable-uploads/d263ecb5-20ba-41e2-a716-6e4db8344826.png"
+                  alt="i-Drive luxury vehicle"
                   className="rounded-2xl shadow-2xl w-full"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-whatsapp-green text-white p-6 rounded-2xl shadow-xl">
                   <div className="text-center">
-                    <div className="text-2xl font-bold">15+</div>
-                    <div className="text-sm">Years of Excellence</div>
+                    <div className="text-2xl font-bold">24/7</div>
+                    <div className="text-sm">Always Available</div>
                   </div>
                 </div>
               </div>

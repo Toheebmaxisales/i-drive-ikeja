@@ -1,46 +1,50 @@
 
 import React from 'react';
-import { Car, Users, Clock, Shield, Sparkles, Headphones } from 'lucide-react';
+import { Car, Users, Clock, Shield, Sparkles, Plane } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Car,
-      title: 'Premium Car Rental',
-      description: 'Choose from our extensive fleet of luxury vehicles including sedans, SUVs, and sports cars.',
-      features: ['Latest Models', 'Full Insurance', 'GPS Navigation']
+      title: 'Self-Drive Rentals',
+      description: 'Get the freedom to explore Lagos at your own pace. Choose from our wide range of vehicles and drive yourself, your way.',
+      features: ['Latest Models', 'Full Insurance', 'GPS Available']
     },
     {
       icon: Users,
-      title: 'Chauffeur Service',
-      description: 'Professional drivers available for business meetings, airport transfers, and special events.',
-      features: ['Licensed Drivers', 'Multi-lingual', 'Discretion Assured']
-    },
-    {
-      icon: Clock,
-      title: 'Flexible Rentals',
-      description: 'Hourly, daily, weekly, or monthly rentals to suit your specific needs and schedule.',
-      features: ['No Hidden Fees', 'Easy Booking', 'Quick Delivery']
+      title: 'Chauffeur-Driven Rentals',
+      description: 'Need a professional driver? Our trained chauffeurs ensure comfort, safety, and punctuality for personal or corporate use.',
+      features: ['Professional Drivers', 'Punctual Service', 'Safe & Reliable']
     },
     {
       icon: Shield,
-      title: 'Airport Transfers',
-      description: 'Reliable and punctual airport pickup and drop-off services with flight monitoring.',
-      features: ['Flight Tracking', 'Meet & Greet', 'Luggage Assistance']
+      title: 'Corporate & Executive Rentals',
+      description: 'Business meetings, office shuttles, VIP guests—we handle it all with class and discretion.',
+      features: ['Executive Vehicles', 'Professional Service', 'Flexible Packages']
     },
     {
       icon: Sparkles,
-      title: 'Wedding & Events',
-      description: 'Make your special day unforgettable with our premium wedding and event car services.',
-      features: ['Decorated Vehicles', 'Professional Service', 'Photo Opportunities']
+      title: 'Event Rentals',
+      description: 'From Coaster buses for guests to luxury rides for couples, we help you make a grand entrance at weddings and parties.',
+      features: ['Wedding Cars', 'Event Buses', 'Special Occasions']
     },
     {
-      icon: Headphones,
-      title: '24/7 Support',
-      description: 'Round-the-clock customer support and roadside assistance for complete peace of mind.',
-      features: ['Emergency Support', 'Live Chat', 'Phone Support']
+      icon: Plane,
+      title: 'Airport Transfers',
+      description: 'Punctual pickups and drop-offs to Murtala Muhammed Airport — stress-free and reliable transportation.',
+      features: ['Flight Tracking', 'On-time Service', 'Comfortable Rides']
+    },
+    {
+      icon: Clock,
+      title: '24/7 Availability',
+      description: 'Round-the-clock service with instant WhatsApp booking. We\'re always ready when you need us.',
+      features: ['Always Available', 'WhatsApp Booking', 'Quick Response']
     }
   ];
+
+  const openWhatsApp = () => {
+    window.open('https://wa.me/2347030641515', '_blank');
+  };
 
   return (
     <section id="services" className="py-20 bg-white">
@@ -52,7 +56,7 @@ const Services = () => {
               Our <span className="text-soft-gold">Services</span>
             </h2>
             <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
-              Comprehensive luxury transportation solutions tailored to your needs
+              Flexible Car Rental Services to Fit Every Journey
             </p>
           </div>
 
@@ -86,13 +90,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* Hover Effect */}
-                <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="text-whatsapp-green font-semibold text-sm hover:text-green-600 transition-colors duration-300">
-                    Learn More →
-                  </button>
-                </div>
               </div>
             ))}
           </div>
@@ -101,13 +98,16 @@ const Services = () => {
           <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-deep-blue-black to-deep-blue-black/90 rounded-2xl p-8 md:p-12">
               <h3 className="font-poppins font-bold text-2xl md:text-3xl text-white mb-4">
-                Ready to Experience Luxury?
+                Need a Ride? Book Instantly on WhatsApp
               </h3>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact us today to discuss your requirements and let us create the perfect transportation solution for you.
+                Whether it's a last-minute trip or a planned event, i-Drive is ready. We're online 24/7.
               </p>
-              <button className="bg-whatsapp-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105">
-                Get Custom Quote
+              <button 
+                onClick={openWhatsApp}
+                className="bg-whatsapp-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
+              >
+                📲 Book Now on WhatsApp
               </button>
             </div>
           </div>

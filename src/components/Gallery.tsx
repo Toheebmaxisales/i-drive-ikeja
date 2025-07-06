@@ -7,52 +7,84 @@ const Gallery = () => {
 
   const cars = [
     {
-      name: 'Mercedes S-Class',
-      category: 'Luxury Sedan',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80',
-      price: '$200',
+      name: 'Toyota Hiace Bus',
+      category: 'Passenger Bus',
+      image: '/lovable-uploads/a3404735-a71d-4b05-9df5-e3e22258493d.png',
+      price: '₦25,000',
       rating: 5,
-      features: ['Premium Interior', 'Chauffeur Available', 'GPS Navigation']
+      features: ['14-Seater', 'AC Fitted', 'Group Transport']
     },
     {
-      name: 'BMW 7 Series',
-      category: 'Executive Sedan',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
-      price: '$180',
+      name: 'Toyota Hiace Premium',
+      category: 'Luxury Bus',
+      image: '/lovable-uploads/9c7a0710-94a1-4235-9584-ae4526b9d743.png',
+      price: '₦30,000',
       rating: 5,
-      features: ['Leather Seats', 'Wi-Fi Enabled', 'Premium Sound']
+      features: ['Premium Interior', 'Chauffeur Available', 'Event Ready']
     },
     {
-      name: 'Audi Q8',
+      name: 'Toyota Hiace Executive',
+      category: 'Executive Transport',
+      image: '/lovable-uploads/55226278-bb7d-478b-9f50-087abec92265.png',
+      price: '₦28,000',
+      rating: 5,
+      features: ['Executive Class', 'Corporate Events', 'Airport Transfer']
+    },
+    {
+      name: 'Acura MDX',
       category: 'Luxury SUV',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-      price: '$220',
+      image: '/lovable-uploads/19435a02-2cbb-4a47-b5cf-c07bbfa7fe27.png',
+      price: '₦35,000',
       rating: 5,
-      features: ['Spacious Interior', 'All-Wheel Drive', 'Advanced Safety']
+      features: ['7-Seater SUV', 'Luxury Interior', 'All-Wheel Drive']
     },
     {
-      name: 'Porsche Panamera',
-      category: 'Sports Sedan',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
-      price: '$280',
+      name: 'Toyota Tacoma',
+      category: 'Pickup Truck',
+      image: '/lovable-uploads/2b2b56a8-9a0b-41e6-a560-43193155d0a5.png',
+      price: '₦30,000',
       rating: 5,
-      features: ['Sport Mode', 'Carbon Fiber', 'Track Ready']
+      features: ['Pickup Truck', 'Cargo Space', 'Rugged Design']
     },
     {
-      name: 'Range Rover',
+      name: 'Toyota Hilux Revolution',
+      category: 'Premium Pickup',
+      image: '/lovable-uploads/c5c3d75e-9ee6-499b-ab0b-5088577e0d74.png',
+      price: '₦40,000',
+      rating: 5,
+      features: ['Premium Pickup', 'Luxury Features', 'Off-Road Ready']
+    },
+    {
+      name: 'Toyota Land Cruiser Prado',
+      category: 'Premium SUV',
+      image: '/lovable-uploads/6db0a83b-9580-46f2-9aa6-42e6b3eb12d9.png',
+      price: '₦45,000',
+      rating: 5,
+      features: ['Premium SUV', 'Luxury Interior', 'Executive Class']
+    },
+    {
+      name: 'Toyota Land Cruiser V8',
       category: 'Luxury SUV',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80',
-      price: '$250',
+      image: '/lovable-uploads/d6d8ab4a-2ac8-4789-9f74-bdc36951201d.png',
+      price: '₦50,000',
       rating: 5,
-      features: ['Off-Road Capable', 'Luxury Interior', 'Panoramic Roof']
+      features: ['V8 Engine', 'Premium Features', 'VIP Transport']
     },
     {
-      name: 'Tesla Model S',
-      category: 'Electric Luxury',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-      price: '$190',
+      name: 'Mercedes GLS 550',
+      category: 'Luxury SUV',
+      image: '/lovable-uploads/75382f74-514f-43d3-a0a6-15e8f45dac2a.png',
+      price: '₦60,000',
       rating: 5,
-      features: ['Zero Emissions', 'Autopilot', 'Supercharging']
+      features: ['Mercedes Luxury', 'Premium Interior', 'Executive Transport']
+    },
+    {
+      name: 'Toyota Land Cruiser 300',
+      category: 'Ultra Luxury SUV',
+      image: '/lovable-uploads/d263ecb5-20ba-41e2-a716-6e4db8344826.png',
+      price: '₦70,000',
+      rating: 5,
+      features: ['Latest Model', 'Ultra Luxury', 'VIP Class']
     }
   ];
 
@@ -64,6 +96,10 @@ const Gallery = () => {
     setSelectedImage((prev) => (prev - 1 + cars.length) % cars.length);
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/2347030641515', '_blank');
+  };
+
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -71,10 +107,10 @@ const Gallery = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-4xl md:text-5xl text-deep-blue-black mb-4">
-              Our Premium <span className="text-soft-gold">Fleet</span>
+              Our <span className="text-soft-gold">Fleet</span>
             </h2>
             <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
-              Discover our collection of meticulously maintained luxury vehicles
+              Explore our wide range of well-maintained vehicles
             </p>
           </div>
 
@@ -140,8 +176,11 @@ const Gallery = () => {
                     ))}
                   </ul>
 
-                  <button className="bg-whatsapp-green text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors duration-300 self-start">
-                    Book Now
+                  <button 
+                    onClick={openWhatsApp}
+                    className="bg-whatsapp-green text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors duration-300 self-start"
+                  >
+                    📲 Book Now
                   </button>
                 </div>
               </div>
@@ -149,7 +188,7 @@ const Gallery = () => {
           </div>
 
           {/* Thumbnail Gallery */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {cars.map((car, index) => (
               <button
                 key={index}
@@ -175,10 +214,13 @@ const Gallery = () => {
             ))}
           </div>
 
-          {/* View All Button */}
+          {/* WhatsApp CTA */}
           <div className="text-center mt-12">
-            <button className="border-2 border-deep-blue-black text-deep-blue-black px-8 py-4 rounded-full font-semibold hover:bg-deep-blue-black hover:text-white transition-all duration-300">
-              View Complete Fleet
+            <button 
+              onClick={openWhatsApp}
+              className="bg-whatsapp-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
+            >
+              📲 WhatsApp for More Cars
             </button>
           </div>
         </div>

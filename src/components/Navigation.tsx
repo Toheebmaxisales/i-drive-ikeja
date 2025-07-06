@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +22,10 @@ const Navigation = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/2347030641515', '_blank');
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-deep-blue-black/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
@@ -30,7 +34,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="font-poppins font-bold text-2xl text-white">
-            Lux<span className="text-soft-gold">Drive</span>
+            i-<span className="text-soft-gold">Drive</span>
           </div>
 
           {/* Desktop Menu */}
@@ -57,7 +61,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('gallery')}
               className="text-white hover:text-soft-gold transition-colors duration-300"
             >
-              Gallery
+              Fleet
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
@@ -66,11 +70,11 @@ const Navigation = () => {
               Reviews
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={openWhatsApp}
               className="bg-whatsapp-green text-white px-6 py-2 rounded-full hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
             >
-              <Phone size={16} />
-              Contact
+              <MessageCircle size={16} />
+              WhatsApp
             </button>
           </div>
 
@@ -109,7 +113,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('gallery')}
                 className="block text-white hover:text-soft-gold transition-colors duration-300"
               >
-                Gallery
+                Fleet
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}
@@ -118,10 +122,10 @@ const Navigation = () => {
                 Reviews
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={openWhatsApp}
                 className="block bg-whatsapp-green text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 text-center"
               >
-                Contact Us
+                📲 WhatsApp Booking
               </button>
             </div>
           </div>

@@ -7,39 +7,46 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, Tech Innovations',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?auto=format&fit=crop&w=150&q=80',
-      rating: 5,
-      text: 'LuxDrive exceeded all my expectations. The BMW 7 Series I rented for my business meetings was immaculate, and the service was absolutely professional. The chauffeur was punctual and courteous. Highly recommend!'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Wedding Planner',
+      name: 'Kay Jason',
+      role: 'Customer',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80',
       rating: 5,
-      text: 'We used LuxDrive for a high-profile wedding, and they delivered perfection. The Range Rover was beautifully decorated, and the service was flawless. Our clients were thrilled with the luxury experience.'
+      text: 'They were perfect for all the days I spent in Lagos. Thanks to i-Drive for making my trip comfortable and stress-free!'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Entertainment Executive',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80',
+      name: 'Fortune',
+      role: 'Wedding Client',
+      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?auto=format&fit=crop&w=150&q=80',
       rating: 5,
-      text: 'The Tesla Model S was the perfect choice for our eco-conscious event. Clean, luxurious, and the booking process was seamless. LuxDrive really understands premium service. Will definitely use again!'
+      text: 'Awesome, beautiful, and comfortable service for our wedding. The vehicles were clean and the service was professional. Highly recommend!'
     },
     {
-      name: 'David Thompson',
-      role: 'Investment Banker',
+      name: 'Gabriel Akoma',
+      role: 'Regular Customer',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80',
       rating: 5,
-      text: 'Outstanding service from start to finish. The Mercedes S-Class was in pristine condition, and their 24/7 support gave me complete peace of mind during my week-long business trip. Truly premium experience.'
+      text: 'Their services are top-notch. Best vendor in Nigeria. I always trust i-Drive for all my transportation needs in Lagos.'
     },
     {
-      name: 'Amanda Foster',
-      role: 'Event Coordinator',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
+      name: 'Eve Chiderah',
+      role: 'Corporate Client',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80',
       rating: 5,
-      text: 'LuxDrive has been our go-to for VIP transportation. Their attention to detail and reliability is unmatched. The Porsche Panamera for our product launch was absolutely perfect and made a great impression.'
+      text: 'Even when others failed me, they were right on time. Reliable, punctual, and professional. i-Drive never disappoints!'
+    },
+    {
+      name: 'Charles N.',
+      role: 'Tourist',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+      rating: 5,
+      text: 'Best vendor in Nigeria. I recommend i-Drive to anyone visiting Lagos. Clean cars, fair prices, and excellent service.'
+    },
+    {
+      name: 'Bruno Charles',
+      role: 'Business Executive',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80',
+      rating: 5,
+      text: 'Clean, affordable vehicles and excellent service. i-Drive has been my go-to for business trips and personal travel in Lagos.'
     }
   ];
 
@@ -64,10 +71,10 @@ const Testimonials = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-4xl md:text-5xl text-deep-blue-black mb-4">
-              What Our Clients <span className="text-soft-gold">Say</span>
+              Customer <span className="text-soft-gold">Reviews</span>
             </h2>
             <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
-              Don't just take our word for it - hear from our satisfied customers
+              See what our satisfied customers say about i-Drive
             </p>
           </div>
 
@@ -144,11 +151,12 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`p-6 bg-white rounded-xl shadow-lg transition-all duration-300 ${
+                className={`p-6 bg-white rounded-xl shadow-lg transition-all duration-300 cursor-pointer ${
                   currentTestimonial === index
                     ? 'ring-2 ring-whatsapp-green scale-105'
                     : 'hover:shadow-xl hover:scale-105'
                 }`}
+                onClick={() => setCurrentTestimonial(index)}
               >
                 {/* Rating */}
                 <div className="flex items-center mb-4">
@@ -159,7 +167,7 @@ const Testimonials = () => {
 
                 {/* Text */}
                 <p className="text-charcoal-gray mb-4 text-sm leading-relaxed">
-                  "{testimonial.text.substring(0, 120)}..."
+                  "{testimonial.text.substring(0, 100)}..."
                 </p>
 
                 {/* Author */}
