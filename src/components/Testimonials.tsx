@@ -9,44 +9,63 @@ const Testimonials = () => {
     {
       name: 'Kay Jason',
       role: 'Customer',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80',
+      image: 'https://i.postimg.cc/8z9Sm5q7/Kay-Jason-Image.png',
       rating: 5,
       text: 'They were perfect for all the days I spent in Lagos. Thanks to i-Drive for making my trip comfortable and stress-free!'
     },
     {
       name: 'Fortune',
       role: 'Wedding Client',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?auto=format&fit=crop&w=150&q=80',
+      image: null,
+      initials: 'F',
       rating: 5,
       text: 'Awesome, beautiful, and comfortable service for our wedding. The vehicles were clean and the service was professional. Highly recommend!'
     },
     {
       name: 'Gabriel Akoma',
       role: 'Regular Customer',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80',
+      image: null,
+      initials: 'GA',
       rating: 5,
       text: 'Their services are top-notch. Best vendor in Nigeria. I always trust i-Drive for all my transportation needs in Lagos.'
     },
     {
       name: 'Eve Chiderah',
       role: 'Corporate Client',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80',
+      image: null,
+      initials: 'EC',
       rating: 5,
       text: 'Even when others failed me, they were right on time. Reliable, punctual, and professional. i-Drive never disappoints!'
     },
     {
       name: 'Charles N.',
       role: 'Tourist',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+      image: null,
+      initials: 'CN',
       rating: 5,
       text: 'Best vendor in Nigeria. I recommend i-Drive to anyone visiting Lagos. Clean cars, fair prices, and excellent service.'
     },
     {
       name: 'Bruno Charles',
       role: 'Business Executive',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80',
+      image: null,
+      initials: 'BC',
       rating: 5,
       text: 'Clean, affordable vehicles and excellent service. i-Drive has been my go-to for business trips and personal travel in Lagos.'
+    },
+    {
+      name: 'Bello Funke',
+      role: 'Customer',
+      image: 'https://i.postimg.cc/br41WB4L/Bello-Funke-Image.png',
+      rating: 5,
+      text: 'Beautiful experience with them. Am grateful thanks'
+    },
+    {
+      name: 'Adebayo Coker',
+      role: 'Customer',
+      image: 'https://i.postimg.cc/852hnY24/adebayo-Coker.png',
+      rating: 5,
+      text: 'Excellent and timely response. Always reliable for customers\' satisfaction. Thank you'
     }
   ];
 
@@ -63,6 +82,42 @@ const Testimonials = () => {
     const interval = setInterval(nextTestimonial, 6000);
     return () => clearInterval(interval);
   }, []);
+
+  const renderAvatar = (testimonial: any) => {
+    if (testimonial.image) {
+      return (
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-16 h-16 rounded-full mr-4 object-cover"
+        />
+      );
+    } else {
+      return (
+        <div className="w-16 h-16 rounded-full bg-charcoal-gray text-white flex items-center justify-center mr-4 font-poppins font-semibold text-lg">
+          {testimonial.initials}
+        </div>
+      );
+    }
+  };
+
+  const renderSmallAvatar = (testimonial: any) => {
+    if (testimonial.image) {
+      return (
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-10 h-10 rounded-full mr-3 object-cover"
+        />
+      );
+    } else {
+      return (
+        <div className="w-10 h-10 rounded-full bg-charcoal-gray text-white flex items-center justify-center mr-3 font-poppins font-semibold text-xs">
+          {testimonial.initials}
+        </div>
+      );
+    }
+  };
 
   return (
     <section id="testimonials" className="py-20 bg-light-slate-gray">
@@ -101,11 +156,7 @@ const Testimonials = () => {
 
                 {/* Author Info */}
                 <div className="flex items-center justify-center">
-                  <img
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-16 h-16 rounded-full mr-4 object-cover"
-                  />
+                  {renderAvatar(testimonials[currentTestimonial])}
                   <div className="text-left">
                     <div className="font-poppins font-semibold text-deep-blue-black">
                       {testimonials[currentTestimonial].name}
@@ -172,11 +223,7 @@ const Testimonials = () => {
 
                 {/* Author */}
                 <div className="flex items-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-10 h-10 rounded-full mr-3 object-cover"
-                  />
+                  {renderSmallAvatar(testimonial)}
                   <div>
                     <div className="font-semibold text-deep-blue-black text-sm">
                       {testimonial.name}

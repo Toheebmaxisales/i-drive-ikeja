@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lucide-react';
 
@@ -215,7 +214,7 @@ const Contact = () => {
                 <p className="font-semibold">Google Maps Integration</p>
                 <p className="text-sm">162c Obafemi Awolowo Way, Oregun, Ikeja</p>
                 <button 
-                  onClick={() => window.open('https://maps.google.com/?q=162c+Obafemi+Awolowo+Way,+Oregun,+Ikeja+101102,+Lagos', '_blank')}
+                  onClick={() => window.open('https://maps.app.goo.gl/7kJmzxzZzvTV4vsQA', '_blank')}
                   className="mt-2 bg-whatsapp-green text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
                 >
                   Get Directions
