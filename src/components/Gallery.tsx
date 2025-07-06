@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
@@ -85,6 +84,46 @@ const Gallery = () => {
       price: '₦70,000',
       rating: 5,
       features: ['Latest Model', 'Ultra Luxury', 'VIP Class']
+    },
+    {
+      name: 'Toyota Highlander',
+      category: 'Premium SUV',
+      image: '/lovable-uploads/e9fc3fad-d270-4b20-9baa-428a04c880b5.png',
+      price: '₦32,000',
+      rating: 5,
+      features: ['7-Seater SUV', 'Family Friendly', 'Comfortable Ride']
+    },
+    {
+      name: 'Toyota Corolla',
+      category: 'Executive Sedan',
+      image: '/lovable-uploads/ab2ddd7e-81f0-46fc-b2d7-358d59a0dc22.png',
+      price: '₦20,000',
+      rating: 5,
+      features: ['Fuel Efficient', 'Comfortable', 'City Drive']
+    },
+    {
+      name: 'Toyota Land Cruiser Prado VX',
+      category: 'Premium SUV',
+      image: '/lovable-uploads/ee039c65-730d-4fe3-874a-9d4c1484710e.png',
+      price: '₦48,000',
+      rating: 5,
+      features: ['VX Package', 'Premium Features', 'Luxury SUV']
+    },
+    {
+      name: 'Lexus GX 460',
+      category: 'Luxury SUV',
+      image: '/lovable-uploads/3e1f1b74-0343-4f24-ae12-465161df00e9.png',
+      price: '₦55,000',
+      rating: 5,
+      features: ['Lexus Luxury', 'Off-Road Capable', 'Premium Comfort']
+    },
+    {
+      name: 'Toyota Camry',
+      category: 'Executive Sedan',
+      image: '/lovable-uploads/c1d991f8-8543-4dc9-ae47-a74abca66646.png',
+      price: '₦22,000',
+      rating: 5,
+      features: ['Executive Sedan', 'Spacious Interior', 'Smooth Drive']
     }
   ];
 
