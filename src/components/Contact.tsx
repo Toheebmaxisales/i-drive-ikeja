@@ -123,7 +123,7 @@ const Contact = () => {
             <div className="animate-slide-in-right">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="font-poppins font-semibold text-2xl text-white mb-6">
-                  Send us a Message
+                  Book on WhatsApp Now
                 </h3>
 
                 {isSubmitted && (
