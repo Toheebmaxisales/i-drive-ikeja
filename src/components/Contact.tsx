@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lucide-react';
 
@@ -208,18 +209,27 @@ const Contact = () => {
             <h3 className="font-poppins font-semibold text-2xl text-white mb-6 text-center">
               Find Us in Lagos
             </h3>
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <MapPin size={48} className="mx-auto mb-4" />
-                <p className="font-semibold">Google Maps Integration</p>
-                <p className="text-sm">162c Obafemi Awolowo Way, Oregun, Ikeja</p>
-                <button 
-                  onClick={() => window.open('https://maps.app.goo.gl/7kJmzxzZzvTV4vsQA', '_blank')}
-                  className="mt-2 bg-whatsapp-green text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
-                >
-                  Get Directions
-                </button>
-              </div>
+            <div className="rounded-lg overflow-hidden h-96 shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.8284834577154!2d3.3790893!3d6.5533533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c2aad3d8c1b%3A0x6b7e7f8f4c8d9e0a!2s162c%20Obafemi%20Awolowo%20Way%2C%20Oregun%2C%20Ikeja%20101102%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1641234567890!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+                title="i-Drive Lagos Location"
+              ></iframe>
+            </div>
+            <div className="mt-4 text-center">
+              <button 
+                onClick={() => window.open('https://maps.app.goo.gl/7kJmzxzZzvTV4vsQA', '_blank')}
+                className="bg-whatsapp-green text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold flex items-center gap-2 mx-auto"
+              >
+                <MapPin size={20} />
+                Get Directions
+              </button>
             </div>
           </div>
 
