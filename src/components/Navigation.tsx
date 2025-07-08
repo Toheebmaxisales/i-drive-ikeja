@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, MessageCircle } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,17 +17,11 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
   const openWhatsApp = () => {
     window.open('https://wa.me/2347030641515', '_blank');
   };
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,42 +30,60 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-poppins font-bold text-2xl text-white">
+          <Link to="/" className="font-poppins font-bold text-2xl text-white">
             i-<span className="text-soft-gold">Drive</span>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-white hover:text-soft-gold transition-colors duration-300"
+            <Link
+              to="/"
+              className={`transition-colors duration-300 ${
+                isActive('/') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-white hover:text-soft-gold transition-colors duration-300"
+            </Link>
+            <Link
+              to="/about"
+              className={`transition-colors duration-300 ${
+                isActive('/about') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-white hover:text-soft-gold transition-colors duration-300"
+            </Link>
+            <Link
+              to="/services"
+              className={`transition-colors duration-300 ${
+                isActive('/services') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
             >
               Services
-            </button>
-            <button
-              onClick={() => scrollToSection('gallery')}
-              className="text-white hover:text-soft-gold transition-colors duration-300"
+            </Link>
+            <Link
+              to="/fleet"
+              className={`transition-colors duration-300 ${
+                isActive('/fleet') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
             >
               Fleet
-            </button>
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className="text-white hover:text-soft-gold transition-colors duration-300"
+            </Link>
+            <Link
+              to="/reviews"
+              className={`transition-colors duration-300 ${
+                isActive('/reviews') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
             >
               Reviews
-            </button>
+            </Link>
+            <Link
+              to="/contact"
+              className={`transition-colors duration-300 ${
+                isActive('/contact') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+              }`}
+            >
+              Contact
+            </Link>
             <button
               onClick={openWhatsApp}
               className="bg-whatsapp-green text-white px-6 py-2 rounded-full hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
@@ -91,39 +106,63 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-deep-blue-black/95 backdrop-blur-sm border-t border-white/10">
             <div className="px-4 py-6 space-y-4">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="block text-white hover:text-soft-gold transition-colors duration-300"
+              <Link
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block text-white hover:text-soft-gold transition-colors duration-300"
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/about') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
               >
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block text-white hover:text-soft-gold transition-colors duration-300"
+              </Link>
+              <Link
+                to="/services"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/services') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('gallery')}
-                className="block text-white hover:text-soft-gold transition-colors duration-300"
+              </Link>
+              <Link
+                to="/fleet"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/fleet') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
               >
                 Fleet
-              </button>
-              <button
-                onClick={() => scrollToSection('testimonials')}
-                className="block text-white hover:text-soft-gold transition-colors duration-300"
+              </Link>
+              <Link
+                to="/reviews"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/reviews') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
               >
                 Reviews
-              </button>
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block transition-colors duration-300 ${
+                  isActive('/contact') ? 'text-soft-gold' : 'text-white hover:text-soft-gold'
+                }`}
+              >
+                Contact
+              </Link>
               <button
                 onClick={openWhatsApp}
-                className="block bg-whatsapp-green text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 text-center"
+                className="block bg-whatsapp-green text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 text-center w-full"
               >
                 📲 WhatsApp Booking
               </button>
