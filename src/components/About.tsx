@@ -57,8 +57,8 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
               {/* Car Image */}
               <div className="bg-white rounded-2xl p-8 shadow-lg flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80"
-                  alt="Premium car rental fleet"
+                  src="/lovable-uploads/6e49cb9e-ebb8-4a54-84c4-10605a57b1ba.png"
+                  alt="i-Drive premium car rental - Black Lexus SUV"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
               </div>
@@ -108,8 +108,8 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
           <div className="mb-16">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80"
-                alt="i-Drive premium car rental fleet"
+                src="/lovable-uploads/6e49cb9e-ebb8-4a54-84c4-10605a57b1ba.png"
+                alt="i-Drive premium car rental fleet - Black Lexus SUV"
                 className="w-full h-80 object-cover rounded-lg shadow-md mb-6"
               />
               <p className="text-center text-charcoal-gray text-lg italic">
