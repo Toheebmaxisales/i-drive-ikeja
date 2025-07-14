@@ -1,14 +1,83 @@
 
 import React from 'react';
-import { Award, Users, Car, Clock, Target, Eye, Lightbulb, Briefcase, Rocket, Key } from 'lucide-react';
+import { Award, Users, Car, Clock, Target, Eye, Lightbulb, Briefcase, Rocket, Key, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const About = () => {
+interface AboutProps {
+  brief?: boolean;
+}
+
+const About: React.FC<AboutProps> = ({ brief = false }) => {
   const stats = [
     { icon: Car, number: '50+', label: 'Clean Vehicles' },
     { icon: Users, number: '1000+', label: 'Happy Customers' },
     { icon: Clock, number: '24/7', label: 'Always Available' },
     { icon: Award, number: '5★', label: 'Top Rated Service' },
   ];
+
+  if (brief) {
+    return (
+      <section id="about" className="py-20 bg-light-slate-gray">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-16 animate-fade-in">
+              <h2 className="font-poppins font-bold text-4xl md:text-5xl text-deep-blue-black mb-4">
+                About <span className="text-soft-gold">i-Drive</span>
+              </h2>
+              <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
+                Lagos' Trusted Car Rental Partner - Your Road, Your Rules
+              </p>
+            </div>
+
+            {/* Brief Content */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
+              <p className="text-charcoal-gray text-lg mb-6 leading-relaxed">
+                At i-Drive Car Rentals, our journey began from a simple but powerful idea: to make quality self-drive car rental accessible and affordable in Lagos. We offer clean, well-maintained vehicles to those who need freedom of movement—whether for business meetings, vacations, weddings, or weekend adventures.
+              </p>
+              
+              <div className="bg-soft-gold/10 p-6 rounded-lg mb-6">
+                <p className="text-deep-blue-black font-semibold text-lg italic text-center">
+                  "To provide our customers with personal transportation solutions that suit their business or leisure needs—with excellence, reliability, and peace of mind."
+                </p>
+              </div>
+
+              <div className="text-center">
+                <Link 
+                  to="/about" 
+                  className="inline-flex items-center bg-soft-gold text-deep-blue-black px-8 py-4 rounded-lg font-semibold hover:bg-soft-gold/90 transition-colors duration-300 shadow-md hover:shadow-lg"
+                >
+                  Learn More About Our Story
+                  <ArrowRight className="ml-2" size={20} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-soft-gold/10 rounded-full mb-4">
+                    <stat.icon className="text-soft-gold" size={32} />
+                  </div>
+                  <div className="font-poppins font-bold text-3xl text-deep-blue-black mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-charcoal-gray">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="about" className="py-20 bg-light-slate-gray">
