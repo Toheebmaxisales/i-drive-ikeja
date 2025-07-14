@@ -30,26 +30,37 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
               </p>
             </div>
 
-            {/* Brief Content */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
-              <p className="text-charcoal-gray text-lg mb-6 leading-relaxed">
-                At i-Drive Car Rentals, our journey began from a simple but powerful idea: to make quality self-drive car rental accessible and affordable in Lagos. We offer clean, well-maintained vehicles to those who need freedom of movement—whether for business meetings, vacations, weddings, or weekend adventures.
-              </p>
-              
-              <div className="bg-soft-gold/10 p-6 rounded-lg mb-6">
-                <p className="text-deep-blue-black font-semibold text-lg italic text-center">
-                  "To provide our customers with personal transportation solutions that suit their business or leisure needs—with excellence, reliability, and peace of mind."
+            {/* Brief Content with Car Image */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <p className="text-charcoal-gray text-lg mb-6 leading-relaxed">
+                  At i-Drive Car Rentals, our journey began from a simple but powerful idea: to make quality self-drive car rental accessible and affordable in Lagos. We offer clean, well-maintained vehicles to those who need freedom of movement—whether for business meetings, vacations, weddings, or weekend adventures.
                 </p>
+                
+                <div className="bg-soft-gold/10 p-6 rounded-lg mb-6">
+                  <p className="text-deep-blue-black font-semibold text-lg italic text-center">
+                    "To provide our customers with personal transportation solutions that suit their business or leisure needs—with excellence, reliability, and peace of mind."
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <Link 
+                    to="/about" 
+                    className="inline-flex items-center bg-soft-gold text-deep-blue-black px-8 py-4 rounded-lg font-semibold hover:bg-soft-gold/90 transition-colors duration-300 shadow-md hover:shadow-lg"
+                  >
+                    Learn More About Our Story
+                    <ArrowRight className="ml-2" size={20} />
+                  </Link>
+                </div>
               </div>
 
-              <div className="text-center">
-                <Link 
-                  to="/about" 
-                  className="inline-flex items-center bg-soft-gold text-deep-blue-black px-8 py-4 rounded-lg font-semibold hover:bg-soft-gold/90 transition-colors duration-300 shadow-md hover:shadow-lg"
-                >
-                  Learn More About Our Story
-                  <ArrowRight className="ml-2" size={20} />
-                </Link>
+              {/* Car Image */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80"
+                  alt="Premium car rental fleet"
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
               </div>
             </div>
 
@@ -91,6 +102,20 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
             <p className="text-xl text-charcoal-gray max-w-2xl mx-auto">
               Lagos' Trusted Car Rental Partner - Your Road, Your Rules
             </p>
+          </div>
+
+          {/* Hero Car Image */}
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80"
+                alt="i-Drive premium car rental fleet"
+                className="w-full h-80 object-cover rounded-lg shadow-md mb-6"
+              />
+              <p className="text-center text-charcoal-gray text-lg italic">
+                Experience Lagos with our premium fleet of clean, well-maintained vehicles
+              </p>
+            </div>
           </div>
 
           {/* The Start Section */}
