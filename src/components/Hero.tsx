@@ -29,8 +29,8 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            We Prioritize Itinerary From{' '}
-            <span className="text-soft-gold">Lagos</span>
+            We Prioritize{' '}
+            <span className="text-soft-gold">Itinerary</span>
           </h1>
 
           {/* Subheading */}

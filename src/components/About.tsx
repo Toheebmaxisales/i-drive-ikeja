@@ -54,12 +54,12 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
                 </div>
               </div>
 
-              {/* Car Image */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg flex items-center justify-center">
+              {/* Car Image - Made bigger */}
+              <div className="bg-white rounded-2xl p-4 shadow-lg flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/6e49cb9e-ebb8-4a54-84c4-10605a57b1ba.png"
                   alt="i-Drive premium car rental - Black Lexus SUV"
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                  className="w-full h-80 object-cover rounded-lg shadow-md"
                 />
               </div>
             </div>
@@ -104,13 +104,13 @@ const About: React.FC<AboutProps> = ({ brief = false }) => {
             </p>
           </div>
 
-          {/* Hero Car Image */}
+          {/* Hero Car Image - Made bigger */}
           <div className="mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-4 shadow-lg">
               <img 
                 src="/lovable-uploads/6e49cb9e-ebb8-4a54-84c4-10605a57b1ba.png"
                 alt="i-Drive premium car rental fleet - Black Lexus SUV"
-                className="w-full h-80 object-cover rounded-lg shadow-md mb-6"
+                className="w-full h-96 object-cover rounded-lg shadow-md mb-6"
               />
               <p className="text-center text-charcoal-gray text-lg italic">
                 Experience Lagos with our premium fleet of clean, well-maintained vehicles
