@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
@@ -9,7 +10,6 @@ const Gallery = () => {
       name: 'Toyota Hiace Bus',
       category: 'Passenger Bus',
       image: '/lovable-uploads/a3404735-a71d-4b05-9df5-e3e22258493d.png',
-      price: '₦25,000',
       rating: 5,
       features: ['14-Seater', 'AC Fitted', 'Group Transport']
     },
@@ -17,7 +17,6 @@ const Gallery = () => {
       name: 'Toyota Hiace Premium',
       category: 'Luxury Bus',
       image: '/lovable-uploads/9c7a0710-94a1-4235-9584-ae4526b9d743.png',
-      price: '₦30,000',
       rating: 5,
       features: ['Premium Interior', 'Chauffeur Available', 'Event Ready']
     },
@@ -25,7 +24,6 @@ const Gallery = () => {
       name: 'Toyota Hiace Executive',
       category: 'Executive Transport',
       image: '/lovable-uploads/55226278-bb7d-478b-9f50-087abec92265.png',
-      price: '₦28,000',
       rating: 5,
       features: ['Executive Class', 'Corporate Events', 'Airport Transfer']
     },
@@ -33,7 +31,6 @@ const Gallery = () => {
       name: 'Acura MDX',
       category: 'Luxury SUV',
       image: '/lovable-uploads/19435a02-2cbb-4a47-b5cf-c07bbfa7fe27.png',
-      price: '₦35,000',
       rating: 5,
       features: ['7-Seater SUV', 'Luxury Interior', 'All-Wheel Drive']
     },
@@ -41,7 +38,6 @@ const Gallery = () => {
       name: 'Toyota Tacoma',
       category: 'Pickup Truck',
       image: '/lovable-uploads/2b2b56a8-9a0b-41e6-a560-43193155d0a5.png',
-      price: '₦30,000',
       rating: 5,
       features: ['Pickup Truck', 'Cargo Space', 'Rugged Design']
     },
@@ -49,7 +45,6 @@ const Gallery = () => {
       name: 'Toyota Hilux Revolution',
       category: 'Premium Pickup',
       image: '/lovable-uploads/c5c3d75e-9ee6-499b-ab0b-5088577e0d74.png',
-      price: '₦40,000',
       rating: 5,
       features: ['Premium Pickup', 'Luxury Features', 'Off-Road Ready']
     },
@@ -57,7 +52,6 @@ const Gallery = () => {
       name: 'Toyota Land Cruiser Prado',
       category: 'Premium SUV',
       image: '/lovable-uploads/6db0a83b-9580-46f2-9aa6-42e6b3eb12d9.png',
-      price: '₦45,000',
       rating: 5,
       features: ['Premium SUV', 'Luxury Interior', 'Executive Class']
     },
@@ -65,7 +59,6 @@ const Gallery = () => {
       name: 'Toyota Land Cruiser V8',
       category: 'Luxury SUV',
       image: '/lovable-uploads/d6d8ab4a-2ac8-4789-9f74-bdc36951201d.png',
-      price: '₦50,000',
       rating: 5,
       features: ['V8 Engine', 'Premium Features', 'VIP Transport']
     },
@@ -73,7 +66,6 @@ const Gallery = () => {
       name: 'Mercedes GLS 550',
       category: 'Luxury SUV',
       image: '/lovable-uploads/75382f74-514f-43d3-a0a6-15e8f45dac2a.png',
-      price: '₦60,000',
       rating: 5,
       features: ['Mercedes Luxury', 'Premium Interior', 'Executive Transport']
     },
@@ -81,7 +73,6 @@ const Gallery = () => {
       name: 'Toyota Land Cruiser 300',
       category: 'Ultra Luxury SUV',
       image: '/lovable-uploads/d263ecb5-20ba-41e2-a716-6e4db8344826.png',
-      price: '₦70,000',
       rating: 5,
       features: ['Latest Model', 'Ultra Luxury', 'VIP Class']
     },
@@ -89,7 +80,6 @@ const Gallery = () => {
       name: 'Toyota Highlander',
       category: 'Premium SUV',
       image: '/lovable-uploads/e9fc3fad-d270-4b20-9baa-428a04c880b5.png',
-      price: '₦32,000',
       rating: 5,
       features: ['7-Seater SUV', 'Family Friendly', 'Comfortable Ride']
     },
@@ -97,7 +87,6 @@ const Gallery = () => {
       name: 'Toyota Corolla',
       category: 'Executive Sedan',
       image: '/lovable-uploads/ab2ddd7e-81f0-46fc-b2d7-358d59a0dc22.png',
-      price: '₦20,000',
       rating: 5,
       features: ['Fuel Efficient', 'Comfortable', 'City Drive']
     },
@@ -105,7 +94,6 @@ const Gallery = () => {
       name: 'Toyota Land Cruiser Prado VX',
       category: 'Premium SUV',
       image: '/lovable-uploads/ee039c65-730d-4fe3-874a-9d4c1484710e.png',
-      price: '₦48,000',
       rating: 5,
       features: ['VX Package', 'Premium Features', 'Luxury SUV']
     },
@@ -113,7 +101,6 @@ const Gallery = () => {
       name: 'Lexus GX 460',
       category: 'Luxury SUV',
       image: '/lovable-uploads/3e1f1b74-0343-4f24-ae12-465161df00e9.png',
-      price: '₦55,000',
       rating: 5,
       features: ['Lexus Luxury', 'Off-Road Capable', 'Premium Comfort']
     },
@@ -121,7 +108,6 @@ const Gallery = () => {
       name: 'Toyota Camry',
       category: 'Executive Sedan',
       image: '/lovable-uploads/c1d991f8-8543-4dc9-ae47-a74abca66646.png',
-      price: '₦22,000',
       rating: 5,
       features: ['Executive Sedan', 'Spacious Interior', 'Smooth Drive']
     }
@@ -178,11 +164,6 @@ const Gallery = () => {
                   >
                     <ChevronRight size={24} />
                   </button>
-
-                  {/* Price Badge */}
-                  <div className="absolute top-4 right-4 bg-whatsapp-green text-white px-4 py-2 rounded-full font-semibold">
-                    {cars[selectedImage].price}/day
-                  </div>
                 </div>
 
                 {/* Details */}
@@ -246,7 +227,6 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
                   <div className="text-white text-left">
                     <div className="font-semibold text-sm">{car.name}</div>
-                    <div className="text-xs opacity-80">{car.price}/day</div>
                   </div>
                 </div>
               </button>
