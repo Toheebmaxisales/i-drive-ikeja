@@ -8,18 +8,21 @@ import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import PageTransition from '../components/PageTransition';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <About brief />
-      <Services />
-      <Gallery />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <PageTransition>
+        <Hero />
+        <About brief />
+        <Services />
+        <Gallery />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </PageTransition>
     </div>
   );
 };
